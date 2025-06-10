@@ -9,7 +9,7 @@ const recommendedImages = [
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
-    { role: "bot", text: "你好，我是穿搭助手，可以上传你的照片获得专属推荐哦！" },
+    { role: "bot", text: "Hi! I'm your outfit assistant. Upload a photo to get personalized outfit recommendations!" },
   ]);
   const [input, setInput] = useState("");
   const [uploadImg, setUploadImg] = useState(null);
@@ -42,7 +42,7 @@ export default function ChatPage() {
     // 系统推荐
     const botMsg = {
       role: "bot",
-      text: "为你推荐三套穿搭：",
+      text: "Recommended outfits for you:",
       imgs: recommendedImages,
     };
 
@@ -55,7 +55,7 @@ export default function ChatPage() {
 
   return (
     <div className="max-w-xl mx-auto p-6">
-      <h2 className="text-2xl font-semibold mb-4">穿搭聊天助手</h2>
+      <h2 className="text-2xl font-semibold mb-4">Outfit Chatbot</h2>
       <div className="h-96 overflow-y-auto border p-4 rounded mb-4 bg-gray-50">
         {messages.map((msg, idx) => (
           <div key={idx} className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}>
@@ -101,14 +101,14 @@ export default function ChatPage() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             className="flex-1 border rounded px-3 py-2"
-            placeholder="输入你的穿搭问题（可选）"
+            placeholder="Enter your outfit question (optional)"
             onKeyDown={e => { if (e.key === 'Enter') handleSend() }}
           />
           <button
             onClick={() => fileInputRef.current && fileInputRef.current.click()}
             className="px-4 py-2 border rounded bg-white hover:bg-blue-50"
           >
-            上传照片
+            Upload photo
           </button>
           <input
             ref={fileInputRef}
@@ -121,7 +121,7 @@ export default function ChatPage() {
         {/* 预览上传的图片 */}
         {uploadImg && (
           <div className="flex items-center gap-3 mt-1">
-            <img src={uploadImg} alt="预览" className="w-20 h-28 object-cover rounded shadow" />
+            <img src={uploadImg} alt="Preview" className="w-20 h-28 object-cover rounded shadow" />
             <button
               onClick={() => {
                 setUploadImg(null);
@@ -129,7 +129,7 @@ export default function ChatPage() {
               }}
               className="text-xs text-red-500"
             >
-              移除
+              Remove
             </button>
           </div>
         )}
@@ -137,7 +137,7 @@ export default function ChatPage() {
           onClick={handleSend}
           className="bg-blue-500 text-white px-4 py-2 rounded mt-2"
         >
-          发送
+          Send
         </button>
       </div>
     </div>
