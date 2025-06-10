@@ -1,9 +1,9 @@
 import React from 'react';
 
 const samplePosts = [
-  { id: 1, img: "/img4.jpg", text: "Commuter outfit share: Grey suit + white T-shirt" },
-  { id: 2, img: "/img5.jpg", text: "Weekend outing look!" },
-  { id: 3, img: "/img6.jpg", text: "Minimalist today's outfit" },
+  { id: 1, img: "../assets/img4.jpg", text: "Commuter outfit share: Grey suit + white T-shirt" },
+  { id: 2, img: "../assets/img5.jpg", text: "Weekend outing look!" },
+  { id: 3, img: "../assets/img6.jpg", text: "Minimalist today's outfit" },
 ];
 
 export default function CommunityPage() {

@@ -2,9 +2,9 @@ import React from 'react';
 import { useRef, useState } from "react";
 
 const recommendedImages = [
-  "/img1.jpg",
-  "/img2.jpg",
-  "/img3.jpg",
+  "../assets/img1.jpg",
+  "../assets/img2.jpg",
+  "../assets/img3.jpg",
 ];
 
 export default function ChatPage() {
