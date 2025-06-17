@@ -1,11 +1,11 @@
 import React from 'react';
 import { useRef, useState } from "react";
 
-const recommendedImages = [
-  "../assets/img1.jpg",
-  "../assets/img2.jpg",
-  "../assets/img3.jpg",
-];
+import img1 from '../assets/img1.jpg';
+import img2 from '../assets/img2.jpg';
+import img3 from '../assets/img3.jpg';
+
+const recommendedImages = [img1, img2, img3];
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
@@ -55,7 +55,7 @@ export default function ChatPage() {
 
   return (
     <div className="max-w-xl mx-auto p-6">
-      <h2 className="text-2xl font-semibold mb-4">Outfit Chatbot</h2>
+      <h2 className="text-2xl font-semibold mb-4">Ask StyleMax</h2>
       <div className="h-96 overflow-y-auto border p-4 rounded mb-4 bg-gray-50">
         {messages.map((msg, idx) => (
           <div key={idx} className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}>
