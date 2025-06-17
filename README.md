@@ -34,7 +34,9 @@ This is a front-end demo for an AI-powered fashion outfit recommendation system.
 
 ---
 
-## 📦 Installation & Run
+## 📦 Installation & Deploy
+
+### Installation and Run
 
 ```bash
 # 1. Clone the repo
@@ -47,6 +49,14 @@ npm install
 npm run dev
 ```
 Then open: http://localhost:5173
+
+### Deploy
+
+```bash
+npm run build
+
+npm run deploy
+```
 
 ## 📁 Project Structure
 
