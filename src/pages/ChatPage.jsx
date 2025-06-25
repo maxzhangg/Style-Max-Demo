@@ -54,9 +54,9 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="max-w-xl mx-auto p-6">
+    <div className="max-w-[900px] mx-auto p-6">
       <h2 className="text-2xl font-semibold mb-4">Ask StyleMax</h2>
-      <div className="h-96 overflow-y-auto border p-4 rounded mb-4 bg-gray-50">
+      <div className="h-[600px] overflow-y-auto border p-4 rounded mb-4 bg-gray-50">
         {messages.map((msg, idx) => (
           <div key={idx} className={`mb-4 ${msg.role === "user" ? "text-right" : "text-left"}`}>
             {/* 显示用户上传的图片 */}
