@@ -2,6 +2,7 @@
   "name": "style-max-demo",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,8 +11,11 @@
   },
   "dependencies": {
     "ai-fashion-demo": "file:",
+    "axios": "^1.10.0",
+    "openai": "^5.8.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^6.22.0"
   },
   "devDependencies": {
